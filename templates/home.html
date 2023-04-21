@@ -1,0 +1,252 @@
+{% extends 'base.html' %} {% block body %}
+
+<main id="home-page" class="overflow-hidden">
+  <section class="d-flex justify-content-between" id="main-page">
+    <div
+      class="text px-5 w-50 d-flex flex-column justify-content-center mytext"
+    >
+      <h2 id="main-page-heading">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci soluta
+        eum quod cupiditate harum ea quasi alias. Tenetur, beatae! Nobis nam
+        numquam ad impedit asperiores!
+      </p>
+      <div>
+        <a href="#make-search" class="text-decoration-none">
+          <button class="btn btn-success">Make Search</button>
+        </a>
+        <a href="/contact-us" class="text-decoration-none" target="_blank">
+          <button class="btn btn-outline-success">Contact Us</button>
+        </a>
+      </div>
+    </div>
+    <div class="image w-50 d-flex justify-content-center align-items-center">
+      <img src="{{url_for('static', filename='/assets/car5.png')}}" alt="" />
+    </div>
+  </section>
+
+  <section id="finance-company">
+    <div id="finance-text-info">
+      <h2 class="text-center mb-5">Finance</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt
+        natus totam placeat provident molestiae, nihil consectetur impedit
+        quibusdam voluptatem mollitia voluptas deleniti facere. Iste consectetur
+        necessitatibus exercitationem. In, neque veniam? Placeat consequatur
+        explicabo eius adipisci dicta hic amet, ipsum a earum, atque recusandae
+        repellat, totam vero porro corrupti dolorum?
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
+        provident officia ipsam quos sit, sunt delectus magni numquam earum
+        laboriosam sequi a vitae, eum itaque dolorum, culpa voluptatum dolor id
+        esse ad voluptatibus? A dolor voluptatibus similique beatae consequatur,
+        laboriosam ea architecto commodi, dolores fugit excepturi ipsa
+        consectetur esse deserunt.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
+        provident officia ipsam quos sit, sunt delectus magni numquam earum
+        laboriosam sequi a vitae, eum itaque dolorum, culpa voluptatum dolor id
+        esse ad voluptatibus? A dolor voluptatibus similique beatae consequatur,
+        laboriosam ea architecto commodi, dolores fugit excepturi ipsa
+        consectetur esse deserunt.
+      </p>
+      <div class="w-100 d-flex justify-content-center">
+        <a href="/finance" class="text-decoration-none">
+          <button class="btn btn-success">Finance</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cars-list">
+    <div class="m-lg-5 m-md-5">
+      <div class="row">
+        {% for i in range(3) %}
+        <div class="col-12 col-md-4 col-sm-12 mb-3">
+          <div id="list" class="card-group overflow-hidden">
+            <div class="card">
+              <img
+                src="static/assets/car4.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 class="card-title">$12000</h4>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-success">More Information</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+
+        <div class="w-100 d-flex justify-content-center pagination-btns">
+          <a href="" class="text-decoration-none">
+            <button class="btn btn-outline-success btn-lg">Prevoius</button>
+          </a>
+          <a href="" class="text-decoration-none">
+            <button class="btn btn-outline-success btn-lg">Next</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-company">
+    <div id="company-text-info">
+      <h2 class="text-center mb-5">Welcome to Budget Cars</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt
+        natus totam placeat provident molestiae, nihil consectetur impedit
+        quibusdam voluptatem mollitia voluptas deleniti facere. Iste consectetur
+        necessitatibus exercitationem. In, neque veniam? Placeat consequatur
+        explicabo eius adipisci dicta hic amet, ipsum a earum, atque recusandae
+        repellat, totam vero porro corrupti dolorum?
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
+        provident officia ipsam quos sit, sunt delectus magni numquam earum
+        laboriosam sequi a vitae, eum itaque dolorum, culpa voluptatum dolor id
+        esse ad voluptatibus? A dolor voluptatibus similique beatae consequatur,
+        laboriosam ea architecto commodi, dolores fugit excepturi ipsa
+        consectetur esse deserunt.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
+        provident officia ipsam quos sit, sunt delectus magni numquam earum
+        laboriosam sequi a vitae, eum itaque dolorum, culpa voluptatum dolor id
+        esse ad voluptatibus? A dolor voluptatibus similique beatae consequatur,
+        laboriosam ea architecto commodi, dolores fugit excepturi ipsa
+        consectetur esse deserunt.
+      </p>
+    </div>
+  </section>
+
+  <section
+    id="make-search"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <div class="my-2">
+      <h1 class="text-center">Make Search</h1>
+      <form class="row g-3 mx-3">
+        <div class="col-md-12">
+          <select
+            class="form-select my-2"
+            aria-label="Default select example"
+            id="make"
+          >
+            <option selected>Select Make</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <select
+            class="form-select my-2"
+            aria-label="Default select example"
+            id="make"
+          >
+            <option selected>Select Model</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <input
+            type="number"
+            name=""
+            id="min-price"
+            placeholder="Enter Minimum Price"
+            class="form-control my-2"
+            onkeyup="change()"
+            onchange="change()"
+            value=""
+          />
+        </div>
+        <div class="col-md-12">
+          <input
+            type="number"
+            name=""
+            id="max-price"
+            placeholder="Enter Maximum Price"
+            class="form-control my-2"
+            value=""
+          />
+        </div>
+        <div class="col-md-12">
+          <button class="btn btn-success my-2">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="my-2">
+      <h1 class="text-center">Compare Vehicles</h1>
+      <form class="row g-3 mx-3">
+        <div class="col-md-12">
+          <select
+            class="form-select my-2"
+            aria-label="Default select example"
+            id="make"
+          >
+            <option selected>Select Make</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <select
+            class="form-select my-2"
+            aria-label="Default select example"
+            id="make"
+          >
+            <option selected>Select Model</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <select
+            class="form-select my-2"
+            aria-label="Default select example"
+            id="make"
+          >
+            <option selected>Select Make</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <select
+            class="form-select my-2"
+            aria-label="Default select example"
+            id="make"
+          >
+            <option selected>Select Model</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <button class="btn btn-success my-2">Compare</button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+</main>
+
+{% endblock body %}

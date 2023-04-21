@@ -1,0 +1,147 @@
+{% extends 'base.html' %} {% block body %}
+
+<main class="container my-5">
+  <section id="contact-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Contact Us</h1>
+          <div class="my-3">
+            <p>123 Main St<br />Anytown, USA 12345</p>
+          </div>
+          <div class="my-3">
+            <h4 class="">Telephone</h4>
+            <p>021 456 232</p>
+            <p>021 456 232</p>
+          </div>
+          <div class="my-3">
+            <h4 class="">Email</h4>
+            <p>Loremipsum@mail.com</p>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="opening-times">
+          <h1>Opening Times</h1>
+          <ul class="list-unstyled">
+            <li class="">
+              <p>Monday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+            <li class="">
+              <p>Tuesday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+            <li class="">
+              <p>Wednesday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+            <li class="">
+              <p>Thursday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+            <li class="">
+              <p>Friday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+            <li class="">
+              <p>Saturday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+            <li class="">
+              <p>Sunday</p>
+              <p>10:00 - 6:00</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-form" class="myforms bg-light">
+    <h1 class="">Get In Touch</h1>
+    <form class="row g-3 mx-3">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" />
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" />
+      </div>
+      <div class="col-md-6">
+        <label for="emailAddr" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="emailAddr" />
+      </div>
+      <div class="col-md-6">
+        <label for="telephone" class="form-label">Telephone</label>
+        <input type="number" class="form-control" id="telephone" />
+      </div>
+      <div class="col-md-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="message"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="col-12 my-3">
+        <button type="submit" class="btn btn-success btn-lg">Send</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="mymap" class="my-5">
+    <h1>Location</h1>
+
+    <div class="get-directions-form row g-3 my-3">
+      <div class="col-md-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Address/Post Code"
+          id="postcode-input"
+        />
+      </div>
+      <div class="col-md-8">
+        <button class="btn btn-success btn-lg" onclick="getDirections()">
+          Get Directions
+        </button>
+      </div>
+    </div>
+    <div id="map"></div>
+  </section>
+</main>
+
+<script>
+  const mylocation = [33.627776, 73.0206032];
+  var map = L.map("map").setView(mylocation, 15);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(map);
+
+  L.marker(mylocation).addTo(map).bindPopup("Budget Cars").openPopup();
+</script>
+
+<script>
+  function getDirections() {
+    // Get the postcode entered by the user
+    var postcode = document.getElementById("postcode-input").value;
+    // Create the Google Maps URL with the postcode as the destination address
+    // var url = "https://www.google.com/maps/dir//" + postcode;
+
+    var destination = { lat: 33.627776, lng: 73.0206032 };
+    var url =
+      "https://www.google.com/maps/dir/?api=1&origin=" +
+      encodeURIComponent(postcode) +
+      "&destination=" +
+      destination.lat +
+      "," +
+      destination.lng;
+
+    // Open the URL in a new window or tab
+    window.open(url, "_blank");
+  }
+</script>
+
+{% endblock body %}

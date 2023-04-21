@@ -1,0 +1,288 @@
+/* Animations */
+
+@keyframes textAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animations End */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* body {
+} */
+
+/* Header */
+header {
+  min-height: 20vh;
+  background-color: #111113;
+}
+
+header nav {
+  min-height: 20vh;
+}
+
+#logo {
+  height: 150px;
+  width: 350px;
+}
+
+.nav-item a {
+  color: whitesmoke !important;
+}
+
+/* Home Page */
+
+#home-page section {
+  height: max-content;
+  padding: 100px 0px;
+}
+
+#main-page {
+  overflow-x: hidden;
+}
+
+#main-page .image img {
+  height: max-content;
+  width: 100%;
+}
+
+/* Finance - About Company Page */
+
+#about-company,
+#finance-company {
+  background-color: #111113;
+  color: whitesmoke;
+}
+
+#company-text-info,
+#finance-text-info {
+  width: 80%;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+/* Vehicles List */
+
+#list .card img {
+  height: 200px;
+}
+
+.pagination-btns button {
+  margin: 0px 10px;
+}
+
+.pagination-btns button a {
+  color: #198754 !important;
+}
+
+.pagination-btns button:hover {
+  color: whitesmoke !important;
+}
+
+/* Search Boxes CSS */
+
+/* #make-search form { */
+/* border: 1px solid black; */
+/* background-color: #dfd9d9; */
+
+/* } */
+
+/* .form-control,
+.form-select {
+  height: max-content;
+} */
+
+textarea,
+input,
+select {
+  min-height: 48px;
+  border: 2px solid #ccc;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.make-search select,
+.min-max input {
+  margin: 5px 10px;
+}
+
+/* Finance Page */
+
+#finance section {
+  padding: 50px 0px;
+}
+
+/* Finance Page Ends */
+
+/* Contact Us Page */
+
+#map {
+  height: 500px;
+}
+
+/* Contact Us Page Ends */
+
+/* Footer CSS */
+
+.footer {
+  background-color: #111113;
+  min-height: fit-content;
+  padding: 50px 0;
+}
+
+.footer h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.footer h4 {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#opening-times ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer p,
+.footer a {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.footer .row div {
+  margin: 5px 0px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer .footer-bottom {
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+.footer .footer-bottom p {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-icons svg {
+  margin: 5px 5px;
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    /* max-width: inherit !important; */
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 900px) {
+  #footer-elements div {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 780px) {
+  #main-page {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #main-page div {
+    width: 100% !important;
+  }
+
+  #main-page .image {
+    margin: 30px 0px;
+  }
+
+  #main-page .image img {
+    width: 80% !important;
+  }
+
+  #list .card img {
+    height: max-content;
+  }
+
+  .card-group > .card {
+    flex: inherit;
+  }
+  #make-search {
+    flex-direction: column;
+  }
+
+  #make-search .make-search,
+  #make-search .vehicles-logo,
+  #make-search div form {
+    width: 95% !important;
+    margin: auto;
+  }
+
+  #make-search div form {
+    margin: 0px 10px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  /* .footer ul {
+    padding-left: 0;
+  } */
+
+  /* .footer a {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 18px;
+  } */
+}

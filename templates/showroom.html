@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% block body %}
+
+<main>
+  <section class="container-fluid my-2">
+    <div class="row">
+      {% for i in range(6) %}
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card my-2">
+          <img src="static/assets/car2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">$12000</h4>
+            <h5 class="card-subtitle">Card title</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              officia possimus, ut deserunt aspernatur ea, atque cupiditate id
+              distinctio dolorum nemo blanditiis! Voluptatum aliquam doloremque
+              sit cum iure error tempore, unde at similique repudiandae sint
+              porro iste est voluptate magni earum architecto magnam ipsam
+              facere. Accusamus aliquam dicta cupiditate molestiae?
+            </p>
+            <div class="card-footer d-flex justify-content-between">
+              <a
+                href="#"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >More Information</a
+              >
+              <a href="#" class="btn btn-outline-success"
+                >View Vehicle</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination d-flex justify-content-center my-3">
+        <li class="page-item">
+          <a class="page-link text-success" href="#">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-success" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-success" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-success" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-success" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</main>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button type="button" class="btn btn-outline-success ">
+          View Vehicle
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

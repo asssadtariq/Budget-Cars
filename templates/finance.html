@@ -1,0 +1,93 @@
+{% extends 'base.html' %} {% block body %}
+
+<main id="finance" class="container my-5">
+  <section id="text-info" class="my-5">
+    <h1>Finance</h1>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+      voluptate? Repudiandae minima autem temporibus odit iste animi ullam
+      dignissimos ad vitae sit excepturi ut obcaecati sed voluptatum veniam modi
+      tempora earum, maiores praesentium saepe consectetur mollitia minus eius.
+      Tempore maxime animi minus. Illum dolorum, odio perspiciatis nobis est
+      cumque ab?
+    </p>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+      voluptate? Repudiandae minima autem temporibus odit iste animi ullam
+      dignissimos ad vitae sit excepturi ut obcaecati sed voluptatum veniam modi
+      tempora earum, maiores praesentium saepe consectetur mollitia minus eius.
+      Tempore maxime animi minus. Illum dolorum, odio perspiciatis nobis est
+      cumque ab?
+    </p>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
+      voluptate? Repudiandae minima autem temporibus odit iste animi ullam
+      dignissimos ad vitae sit excepturi ut obcaecati sed voluptatum veniam modi
+      tempora earum, maiores praesentium saepe consectetur mollitia minus eius.
+      Tempore maxime animi minus. Illum dolorum, odio perspiciatis nobis est
+      cumque ab?
+    </p>
+  </section>
+
+  <section id="contact-form" class="myforms bg-light">
+    <h1 class="mx-3">Enquiry About Finance</h1>
+    <form class="row g-3 mx-3">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" />
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" />
+      </div>
+      <div class="col-md-6">
+        <label for="emailAddr" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="emailAddr" />
+      </div>
+      <div class="col-md-6">
+        <label for="telephone" class="form-label">Telephone</label>
+        <input type="number" class="form-control" id="telephone" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="Deposit" class="form-label">Deposit</label>
+        <input type="text" class="form-control" id="Deposit" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="Mileage" class="form-label">Mileage</label>
+        <input type="text" class="form-control" id="Mileage" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="LengthOfTerm" class="form-label">Length of Term</label>
+        <select type="text" class="form-select" id="LengthOfTerm">
+          <option disabled selected>Select here</option>
+          <option value="">12 months</option>
+          <option value="">24 months</option>
+          <option value="">36 months</option>
+          <option value="">48 months</option>
+          <option value="">60 months</option>
+        </select>
+      </div>
+
+      <div class="col-md-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="message"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="col-12 my-3">
+        <button type="submit" class="btn btn-success btn-lg">Send</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+{% endblock body %}
