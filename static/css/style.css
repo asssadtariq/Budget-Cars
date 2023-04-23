@@ -36,7 +36,7 @@ header nav {
 
 #logo {
   height: 150px;
-  width: 350px;
+  width: 300px;
 }
 
 .nav-item a {
@@ -93,19 +93,6 @@ header nav {
   color: whitesmoke !important;
 }
 
-/* Search Boxes CSS */
-
-/* #make-search form { */
-/* border: 1px solid black; */
-/* background-color: #dfd9d9; */
-
-/* } */
-
-/* .form-control,
-.form-select {
-  height: max-content;
-} */
-
 textarea,
 input,
 select {
@@ -119,6 +106,19 @@ select {
 .min-max input {
   margin: 5px 10px;
 }
+
+/* Showroom Page */
+
+#modal-main-image {
+  max-width: 100%;
+}
+
+#modal-side-images img {
+  height: 100px;
+  width: -webkit-fill-available;
+}
+
+/* Showroom */
 
 /* Finance Page */
 
@@ -223,9 +223,46 @@ select {
   }
 }
 
-@media (max-width: 900px) {
-  #footer-elements div {
+@media (max-width: 350px) {
+  #modal-main-image {
+    max-height: 65% !important;
+    max-width: fit-content;
+  }
+
+  .mobile-display {
+    display: block !important;
+  }
+
+  .mobile-display a {
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-border-radius: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #modal-main-image {
+    max-height: 75%;
+    max-width: fit-content;
+  }
+
+  #modal-side-images {
+    display: none;
+  }
+
+  .features {
     width: 100% !important;
+  }
+
+  .more-features {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .features {
+    width: 33.33%;
   }
 }
 
@@ -285,4 +322,10 @@ select {
   .footer p {
     font-size: 18px;
   } */
+}
+
+@media (max-width: 900px) {
+  #footer-elements div {
+    width: 100% !important;
+  }
 }
