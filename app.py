@@ -11,6 +11,10 @@ def index():
 def showroom():
     return render_template("showroom.html", title="Budget Cars | Showroom")
 
+@app.route("/view_vehicles")
+def view_vehicles():
+    return render_template("vehicles_info.html", title="Budget Cars | Vehicles Info")
+
 @app.route("/vans")
 def vans():
     return render_template("vehicles.html", title="Budget Cars | Showroom")
@@ -19,7 +23,7 @@ def vans():
 def cars():
     return render_template("vehicles.html", title="Budget Cars | Cars")
 
-@app.route("/parts-exchange")
+@app.route("/parts_exchange")
 def parts_exchange():
     return render_template("parts_exchange.html", title="Budget Cars | Parts Exchange")
 
