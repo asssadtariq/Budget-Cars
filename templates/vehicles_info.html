@@ -1,24 +1,270 @@
-{% extends "base.html" %}
-{% block body %}
+{% extends "base.html" %} {% block body %}
 
-<main>
-<!--    
-    Can have a search functionality at top
+<main id="vehicle-info">
+  <!-- Can have a search functionality at top -->
 
-    Multiple Sections 
-    First Section ------
+  <!-- Multiple Sections  -->
+  <!-- First Section ------
         car big image + more images | info
 
-    Second Section ------
+        col-md-lg- 8 - 4
+        col-sm-12 - 12 -->
+
+  <section class="">
+    <div class="container-fluid row vehicle-info">
+      <div class="col-12">
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h3>500000</h3>
+        <h6>Lorem ipsum dolor sit amet.</h6>
+      </div>
+      <div
+        class="col-12 col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-content-center"
+      >
+        <div class="big-image d-flex justify-content-center">
+          <img src="/static/assets/car (1).jpeg" alt="" />
+        </div>
+
+        <div class="row more-images d-flex justify-content-center my-2">
+          <div
+            class="col-12 images d-flex justify-content-center align-items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+              style="background-color: gray; width: 34px; height: 100px"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+            <img
+              src="/static/assets/car (2).jpeg"
+              alt=""
+              class="d-none d-lg-block"
+            />
+
+            <img src="/static/assets/car (3).jpeg" alt="" />
+            <img
+              src="/static/assets/car (4).jpeg"
+              alt=""
+              class="d-none d-lg-block d-md-block"
+            />
+
+            <img
+              src="/static/assets/car (5).jpeg"
+              alt=""
+              class="d-none d-lg-block d-md-block"
+            />
+            <img
+              src="/static/assets/car (6).jpeg"
+              alt=""
+              class="d-none d-xl-block"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+              style="background-color: gray; width: 34px; height: 100px"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- <div class="d-flex justify-content-center"> -->
+
+        <!-- <a href="" class="btn btn-outline-success mx-1">Previous</a>
+            <a href="" class="btn btn-outline-success mx-1">Next</a> -->
+        <!-- </div> -->
+      </div>
+
+      <div
+        class="col-12 col-lg-4 col-md-4 col-sm-12 my-3 d-flex justify-content-center align-items-center"
+      >
+        <ul class="details vehicle-details w-100">
+          {% for i in range(10) %}
+          <li>
+            <p>Make</p>
+            <p>Ferrari</p>
+          </li>
+          <hr class="my-1 border-success border-5" />
+          {% endfor %}
+          <li class="justify-content-center my-2">
+            <a href="" class="btn btn-success w-100"> Print Details </a>
+          </li>
+          <li class="justify-content-center my-2">
+            <a href="" class="btn btn-success w-100"> Enquiry Form </a>
+          </li>
+          <li class="justify-content-center my-2">
+            <a href="" class="btn btn-success w-100"> Cost Calculator </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Second Section ------
         more info in form of cards
+        col-lg-md-4-4-4
+        col-sm-12 -->
+  <section class="container-fluid bg-dark text-light">
+    <div class="row">
+      <h1 class="">Technical Features</h1>
+      <div
+        class="col-12 col-lg-4 col-md-4 col-sm-12 d-flex flex-column justify-content-start align-items-center"
+      >
+        <h3>Engine & MPG</h3>
+        <ul class="list-unstyled technical-features">
+          <li>
+            <p>Engine Size: 6,262cc</p>
+          </li>
+          <li><p>MPG Combined: 18.5mpg</p></li>
+          <li>
+            <p>MPG Urban: 12.1mpg</p>
+          </li>
+          <li>
+            <p>MPG Extra-urban: 26.2mpg</p>
+          </li>
+        </ul>
+      </div>
 
-    3 
+      <div
+        class="col-12 col-lg-4 col-md-4 col-sm-12 d-flex flex-column justify-content-start align-items-center"
+      >
+        <h3>Performance & Safety</h3>
+        <ul class="list-unstyled technical-features">
+          <li>
+            <p>0 - 60 mph: 3.4seconds</p>
+          </li>
+          <li><p>BHP: 679bhp</p></li>
+          <li>
+            <p>Top Speed: 208mph</p>
+          </li>
+          <li>
+            <p>CO2 emissions: 350g/km</p>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="col-12 col-lg-4 col-md-4 col-sm-12 d-flex flex-column justify-content-start align-items-center"
+      >
+        <h3>Dimensions & Weight</h3>
+        <ul class="list-unstyled technical-features">
+          <li>
+            <p>Height: 1,383mm</p>
+          </li>
+          <li><p>Length: 4,922mm</p></li>
+          <li>
+            <p>Width: 1,980mm</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 3 
         Description
+        col-lg-md-sm-auto -->
 
-    4 Running Cost Calculator
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          accusamus, dolores, dolorum error modi unde totam cupiditate pariatur
+          et officia quasi repudiandae aliquid fuga explicabo impedit ipsa
+          repellendus fugiat consectetur eaque recusandae consequatur ipsam
+          excepturi rem reiciendis. Distinctio at accusamus vel! Enim odio
+          voluptatibus accusamus temporibus, sequi veritatis rem numquam ut
+          consequuntur dolore. Sed repudiandae inventore dicta voluptatum
+          quaerat consectetur amet! Nobis, veniam iure voluptates unde ipsum
+          iste pariatur ut autem, voluptatibus harum nihil, et reiciendis. Dolor
+          cupiditate placeat velit? Sed sit nesciunt sunt, nihil ducimus optio
+          in, nam perspiciatis dolores eaque blanditiis quam odio quod commodi
+          impedit laborum! Iure ullam doloremque voluptatem, quaerat aliquam
+          ratione eius ad repellendus distinctio aspernatur, asperiores sint
+          officia facilis debitis, veritatis magni veniam beatae.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    5 Form
- -->
+  <!-- 4 Running Cost Calculator
+        3 things --- description - mileage input - calculate button
+        col-lg-md-8-4-4
+        col-sm-12 -->
+
+  <section class="container-fluid bg-dark text-light">
+    <div class="row">
+      <div class="col-6 d-flex align-items-center justify-content-center my-2">
+        <p>
+          Use our running cost calculator to estimate the monthly and annual
+          cost of running this vehicle depending on your annual mileage
+        </p>
+      </div>
+      <div
+        class="col-3 d-flex flex-column align-items-center justify-content-center my-2"
+      >
+        <label for="mileage-value"></label>
+        <input
+          type="text"
+          class="form-control w-auto"
+          id="mileage-value"
+          placeholder="Enter Mileage e.g 6000"
+        />
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center my-2">
+        <a href="" class="btn btn-success">Calculate</a>
+      </div>
+    </div>
+  </section>
+  <!-- 5 Form
+        contact us form -->
+  <section id="contact-form" class="myforms bg-light">
+    <h1 class="">Get In Touch</h1>
+    <form class="row g-3 mx-3">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" />
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" />
+      </div>
+      <div class="col-md-6">
+        <label for="emailAddr" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="emailAddr" />
+      </div>
+      <div class="col-md-6">
+        <label for="telephone" class="form-label">Telephone</label>
+        <input type="number" class="form-control" id="telephone" />
+      </div>
+      <div class="col-md-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="message"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="col-12 my-3">
+        <button type="submit" class="btn btn-success btn-lg">Send</button>
+      </div>
+    </form>
+  </section>
 </main>
 
 {% endblock body %}

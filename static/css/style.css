@@ -43,6 +43,10 @@ header nav {
   color: whitesmoke !important;
 }
 
+/* main section {
+  padding: 100px 0px;
+} */
+
 /* Home Page */
 
 #home-page section {
@@ -119,6 +123,35 @@ select {
 }
 
 /* Showroom */
+
+/* View Vehicle Page */
+
+#vehicle-info section{
+  margin: 10px 0px;
+}
+
+.vehicle-details li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 5px;
+  list-style: none;
+}
+
+.big-image img {
+  max-width: 100%;
+  width: fit-content;
+  height: 100%;
+}
+
+.more-images img {
+  height: 100px;
+  width: 140px;
+}
+
+.technical-features li p {
+  text-align: center;
+}
+/* View Vehicle Page */
 
 /* Finance Page */
 
@@ -238,6 +271,9 @@ select {
     --bs-btn-padding-x: 1rem;
     --bs-btn-font-size: 1.25rem;
     --bs-btn-border-radius: 0.5rem;
+  }
+  .big-image img {
+    max-width: 100%;
   }
 }
 
