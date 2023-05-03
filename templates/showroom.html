@@ -126,7 +126,10 @@
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-fullscreen" style="height: max-content!important;">
+  <div
+    class="modal-dialog modal-fullscreen"
+    style="height: max-content !important"
+  >
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -144,7 +147,11 @@
           <div
             class="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center alig"
           >
-            <img src="static/assets/car2.jpg" alt="" id="modal-main-image" />
+            <img
+              src="static/assets/car (2).jpeg"
+              alt=""
+              id="modal-main-image"
+            />
           </div>
 
           <div class="col-12 col-lg-6 col-md-12 col-sm-12">
@@ -152,7 +159,7 @@
               {% for i in range(8) %}
               <div class="col-3 col-lg-4">
                 <img
-                  src="static/assets/car2.jpg"
+                  src="static/assets/car ({{i+10}}).jpeg"
                   alt=""
                   class="modal-side-image"
                 />

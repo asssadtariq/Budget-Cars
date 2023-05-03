@@ -60,47 +60,45 @@
         <button class="btn btn-success">Finance</button>
       </a>
     </div>
-</section>
+  </section>
 
   <section class="container-fluid" id="cars-list">
-      <div class="row m-lg-5 m-md-5">
-        {% for i in range(6) %}
-        <div id="list" class="col-12 col-md-6 col-xl-4 mb-3">
-          <div  class="card-group overflow-hidden">
-            <div class="card">
-              <img
-                src="static/assets/car4.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h4 class="card-title">$12000</h4>
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="/view_vehicles" class="btn btn-outline-success"
-                  >View Vehicle</a
-                >
-              </div>
+    <div class="row m-lg-5 m-md-5">
+      {% for i in range(6) %}
+      <div id="list" class="col-12 col-md-6 col-xl-4 mb-3">
+        <div class="card-group overflow-hidden">
+          <div class="card">
+            <img src="static/assets/car4.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h4 class="card-title">$12000</h4>
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between mobile-display"
+            >
+              <a
+                href="#"
+                class="btn btn-success my-1"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >More Information</a
+              >
+              <a href="/view_vehicles" class="btn btn-outline-success my-1"
+                >View Vehicle</a
+              >
             </div>
           </div>
         </div>
-        {%endfor%}
-
-        <!-- <div class="w-100 d-flex justify-content-center pagination-btns">
-          <a href="" class="text-decoration-none">
-            <button class="btn btn-outline-success">Prevoius</button>
-          </a>
-          <a href="" class="text-decoration-none">
-            <button class="btn btn-outline-success">Next</button>
-          </a>
-        </div> -->
       </div>
-      <div class="d-flex justify-content-center">
-        <a href="/showroom" class="btn btn-success">Showroom</a>
-      </div>
+      {%endfor%}
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="/showroom" class="btn btn-success">Showroom</a>
+    </div>
   </section>
 
   <section id="about-company">
@@ -250,5 +248,97 @@
     </div>
   </section>
 </main>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-fullscreen"
+    style="height: max-content !important"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Make + Model Name
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mx-3 d-flex justify-content-between">
+          <div
+            class="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center alig"
+          >
+            <img
+              src="static/assets/car (2).jpeg"
+              alt=""
+              id="modal-main-image"
+            />
+          </div>
+
+          <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+            <div class="row" id="modal-side-images">
+              {% for i in range(8) %}
+              <div class="col-3 col-lg-4">
+                <img
+                  src="static/assets/car ({{i+10}}).jpeg"
+                  alt=""
+                  class="modal-side-image"
+                />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="row mx-3 d-flex justify-content-between">
+          <div class="col-sm-12 col-md-4 features">
+            {% for i in range(5) %}
+            <div class="d-flex justify-content-between">
+              <p>Make</p>
+              <p>Ferrari</p>
+            </div>
+            <hr class="my-1 border-success border-5" />
+            {% endfor %}
+          </div>
+          <div class="col-sm-12 col-md-4 features">
+            {% for i in range(5) %}
+            <div class="d-flex justify-content-between">
+              <p>Make</p>
+              <p>Ferrari</p>
+            </div>
+            <hr class="my-1 border-success border-5" />
+            {% endfor %}
+          </div>
+          <div class="col-sm-12 col-md-4 features more-features">
+            {% for i in range(5) %}
+            <div class="d-flex justify-content-between">
+              <p>Make</p>
+              <p>Ferrari</p>
+            </div>
+            <hr class="my-1 border-success border-5" />
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <a href="/view_vehicles" class="btn btn-outline-success">
+          View Vehicle
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock body %}

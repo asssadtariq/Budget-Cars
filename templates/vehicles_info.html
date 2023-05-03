@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block body %}
 
-<main id="vehicle-info">
+<main id="vehicle-info" class="container-fluid">
   <!-- Can have a search functionality at top -->
 
   <!-- Multiple Sections  -->
@@ -33,9 +33,9 @@
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-arrow-left"
+              class="bi bi-arrow-left bg-dark bg-opacity-10"
               viewBox="0 0 16 16"
-              style="background-color: gray; width: 34px; height: 100px"
+              style="width: 45px; height: 100px"
             >
               <path
                 fill-rule="evenodd"
@@ -70,9 +70,9 @@
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-arrow-right"
+              class="bi bi-arrow-right bg-dark bg-opacity-10"
               viewBox="0 0 16 16"
-              style="background-color: gray; width: 34px; height: 100px"
+              style="width: 45px; height: 100px"
             >
               <path
                 fill-rule="evenodd"
@@ -208,7 +208,9 @@
 
   <section class="container-fluid bg-dark text-light">
     <div class="row">
-      <div class="col-auto d-flex align-items-center justify-content-center my-2">
+      <div
+        class="col-auto d-flex align-items-center justify-content-center my-2"
+      >
         <p>
           Use our running cost calculator to estimate the monthly and annual
           cost of running this vehicle depending on your annual mileage
@@ -220,21 +222,23 @@
         <label for="mileage-value"></label>
         <input
           type="text"
-          class="form-control w-auto"
+          class="form-control w-100"
           id="mileage-value"
           placeholder="Enter Mileage e.g 6000"
         />
       </div>
-      <div class="col-auto d-flex align-items-center justify-content-center my-2">
+      <div
+        class="col-auto d-flex align-items-center justify-content-center my-2"
+      >
         <a href="" class="btn btn-success">Calculate</a>
       </div>
     </div>
   </section>
   <!-- 5 Form
         contact us form -->
-  <section id="contact-form" class="myforms bg-light">
-    <h1 class="">Get In Touch</h1>
-    <form class="row g-3 mx-3">
+  <section id="contact-form" class="container-fluid myforms bg-dark bg-opacity-10">
+    <h1 class="mx-1">Get In Touch</h1>
+    <form class="row g-3 mx-1">
       <div class="col-md-6">
         <label for="firstName" class="form-label">First Name</label>
         <input type="text" class="form-control" id="firstName" />

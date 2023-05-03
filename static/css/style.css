@@ -157,7 +157,7 @@ select {
 /* Finance Page */
 
 #finance section {
-  padding: 50px 0px;
+  margin: 50px 0px;
 }
 
 /* Finance Page Ends */
@@ -280,8 +280,9 @@ select {
 
 @media (max-width: 500px) {
   #modal-main-image {
-    max-height: 75%;
+    max-height: 100%;
     max-width: fit-content;
+    width: 100%;
   }
 
   #modal-side-images {
@@ -366,3 +367,9 @@ select {
     width: 100% !important;
   }
 }
+
+/* #make-search {
+  background-image: url("/static/assets/main-page-image.jpg");
+  background-size: cover;
+  color: white;
+} */
